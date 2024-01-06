@@ -30,7 +30,7 @@ namespace PomniJester.Patches
 
             Material? matReference = null;
             // swap skin
-            // matReferences is needed because HDRP/Lit shaders exported through assetbundles aren't *quite* right
+            // matReference is needed because HDRP/Lit shaders exported through assetbundles aren't *quite* right
             // Other shaders (such as custom & unlit shaders) SOMETIMES work, but we'll need an HDRP/Lit reference to use the shader in this case
             var materials = __instance.GetComponentsInChildren<Renderer>(true).SelectMany(x => x.sharedMaterials).ToList();
             foreach (var material in materials)
